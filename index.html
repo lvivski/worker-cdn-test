@@ -25,7 +25,7 @@
         const worker = new Worker(URL.createObjectURL(blob));
 
         worker.onerror = (e) => {
-            console.error('Worker error:', e)
+            console.info('Worker error:', e)
         }
     </script>
 </body>
