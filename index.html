@@ -11,6 +11,7 @@
 
         const workerTemplate = (script) => {
             self.onunhandledrejection = (e) => {
+                e.preventDefault()
                 throw e.reason
             }
             importScripts(script)
