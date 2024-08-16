@@ -14,6 +14,10 @@
                 throw e.reason
             }
             importScripts(script)
+
+            setTimeout(() => {
+                Promise.resolve().then(() => { throw new Error('loader error') });
+            }, 1000)
         }
 
         const blob = new Blob([`(${workerTemplate.toString()})('${script}')`], { type: 'application/javascript' });

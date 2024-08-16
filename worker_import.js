@@ -1,3 +1,3 @@
 setTimeout(() => {
-    Promise.reject('Error from worker_import.js')
+    Promise.resolve().then(() => { throw new Error('Error from worker_import.js') });
 }, 500)
