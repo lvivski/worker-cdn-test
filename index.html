@@ -12,7 +12,7 @@
         const workerTemplate = (script) => {
             self.onunhandledrejection = (e) => {
                 e.preventDefault()
-                throw e.reason
+                throw e.reason?.stack ?? e.reason
             }
             importScripts(script)
 
