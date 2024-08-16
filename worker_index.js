@@ -3,5 +3,5 @@ setTimeout(() => {
 }, 100)
 
 setTimeout(() => {
-    Promise.reject('Error from worker_import.js')
+    Promise.reject('Error from worker_index.js')
 }, 500)
